@@ -32,3 +32,7 @@ jobs:
         run: |
           docker push \
             "${{ secrets.DOCKER_USERNAME }}/cicd-demo:latest"
+      - name: Clean worksoace
+        run: |
+          rm -rf ./*
+          rm -rf ./.git
